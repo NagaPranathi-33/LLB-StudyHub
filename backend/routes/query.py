@@ -31,6 +31,12 @@ class QueryInput(BaseModel):
 async def query_text(data: QueryInput):
     try:
         chunks = retrieve_context(data.question)
+        if not chunks:
+            raise HTTPException(
+                status_code=404,
+                detail="No indexed document context found. Upload a PDF first.",
+            )
+
         context = "\n\n".join(chunks)
 
         prompt = f"""

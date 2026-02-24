@@ -2,7 +2,9 @@ fastapi
 uvicorn
 python-multipart
 pymupdf
+PyPDF2
 openai
 chromadb
 python-dotenv
 google-genai
+sentence-transformers
