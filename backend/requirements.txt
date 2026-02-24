@@ -5,3 +5,4 @@ pymupdf
 openai
 chromadb
 python-dotenv
+google-genai
